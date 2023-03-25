@@ -10,6 +10,7 @@ namespace MementoPattern
     {
         static void Main(string[] args)
         {
+            //My simple Code
             Editor editor = new Editor();
             editor.Content = "a";
             editor.Content = "b";

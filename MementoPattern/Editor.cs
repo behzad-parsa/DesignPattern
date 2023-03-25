@@ -8,6 +8,7 @@ namespace MementoPattern
 {
     internal class Editor
     {
+        // My SImple Code
         private string content;
         private readonly Stack<string> stack;
         
