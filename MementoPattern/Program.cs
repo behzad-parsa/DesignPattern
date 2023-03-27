@@ -12,13 +12,18 @@ namespace MementoPattern
         {
             //My simple Code
             Editor editor = new Editor();
+            History history = new History();
+
             editor.Content = "a";
+            history.Push(editor.CreateState());
+
             editor.Content = "b";
+            history.Push(editor.CreateState());
+
             editor.Content = "c";
-            Console.WriteLine(editor.Content);
-            editor.Undo();
-            Console.WriteLine(editor.Content);
-            editor.Undo();
+
+            //Console.WriteLine(editor.Content);
+            editor.Restore(history.Pop());
             Console.WriteLine(editor.Content);
 
             Console.ReadLine();

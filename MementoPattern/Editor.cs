@@ -10,7 +10,6 @@ namespace MementoPattern
     {
         // My SImple Code
         private string content;
-        private readonly Stack<string> stack;
         
         public string Content { 
             get
@@ -19,21 +18,24 @@ namespace MementoPattern
             }
             set
             {
-                stack.Push(value);
-                content = stack.Peek();
+                content = value;
             }
         }
 
 
         public Editor()
         {
-            stack = new Stack<string>();
+        
         }
 
-        public void Undo()
+        public EditorState CreateState()
         {
-            stack.Pop();
-            content = stack.Peek();
+            return new EditorState(content);
         }
+        public void Restore(EditorState editorState)
+        {
+            this.content = editorState.Content; 
+        }
+
     }
 }
