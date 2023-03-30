@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="Editor.cs" />
     <Compile Include="EditorState.cs" />
+    <Compile Include="Exercise\Document.cs" />
+    <Compile Include="Exercise\DocumentState.cs" />
+    <Compile Include="Exercise\History.cs" />
     <Compile Include="History.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
