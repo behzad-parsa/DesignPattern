@@ -45,6 +45,12 @@
   <ItemGroup>
     <Compile Include="BrushTool.cs" />
     <Compile Include="Canvas.cs" />
+    <Compile Include="Exercise\Bicycle.cs" />
+    <Compile Include="Exercise\DirectionService.cs" />
+    <Compile Include="Exercise\Drive.cs" />
+    <Compile Include="Exercise\ITravelMode.cs" />
+    <Compile Include="Exercise\Transit.cs" />
+    <Compile Include="Exercise\Walk.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SelectionTool.cs" />
@@ -53,5 +59,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

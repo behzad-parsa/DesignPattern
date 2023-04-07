@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StatePattern.Exercise;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,16 @@ namespace StatePattern
             canvas.MouseDown();
             canvas.MouseUp();
 
+            Console.WriteLine("\n ---------------------------- \n");
+            //Exercise
+            var directionService = new DirectionService();
+            directionService.TravelMode = new Drive();
+            directionService.GetDirection();
+            directionService.GetEta();
+
+            directionService.TravelMode = new Walk();
+            directionService.GetDirection();
+            directionService.GetEta();
 
             Console.ReadLine();
         }
