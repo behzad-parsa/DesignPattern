@@ -10,12 +10,7 @@ namespace StatePattern.Exercise
     internal class DirectionService
     {
         public ITravelMode TravelMode { get; set; }
-
-        public DirectionService(ITravelMode travelMode)
-        {
-            this.TravelMode = travelMode;
-        }
-
+        
         public object GetDirection()
         {
             return TravelMode.GetDirection();

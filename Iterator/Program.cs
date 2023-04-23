@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Iterator
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            var history = new BrowseHistory();
+            history.Push("a");
+            history.Push("b");
+            history.Push("c");
+
+            //if one day ,the internal structure of the class changed , this code would not affected
+            var iterator = history.CreateIterator();
+            while (iterator.HasNext())
+            {
+                Console.WriteLine(iterator.Current());
+                iterator.Next();
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
