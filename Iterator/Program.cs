@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Iterator.Exercise;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,23 @@ namespace Iterator
                 Console.WriteLine(iterator.Current());
                 iterator.Next();
             }
+
+            Console.WriteLine("\n -- Exercise --\n");
+            //------- Exercise ---------------
+            var productCollection = new ProductCollection();
+            productCollection.Push(new Product(1, "Phone"));
+            productCollection.Push(new Product(2, "Computer"));
+            productCollection.Push(new Product(3, "AirPods"));
+
+
+            var productIterator = productCollection.CreateIteratorInstance();
+
+            while (productIterator.HasNext())
+            {
+                Console.WriteLine(productIterator.Current());
+                productIterator.Next();
+            }
+
 
             Console.ReadLine();
         }

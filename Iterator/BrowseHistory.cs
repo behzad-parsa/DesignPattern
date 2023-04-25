@@ -12,7 +12,7 @@ namespace Iterator
     {
         private List<string> urls = new List<string>();
         // can change this to array and implement the structure based on the array without affecting the iterator code 
-        //private string[] urls = new string[10]; 
+        //private string[] urls = new string[10];  
 
         public void Push(string url)
         {
