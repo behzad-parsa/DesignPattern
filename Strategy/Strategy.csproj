@@ -44,6 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlackAndWhiteFilter.cs" />
+    <Compile Include="Exercise\AESAlgorithm.cs" />
+    <Compile Include="Exercise\ChatClient.cs" />
+    <Compile Include="Exercise\DESAlgorithm.cs" />
+    <Compile Include="Exercise\IEncrypt.cs" />
     <Compile Include="ICompressor.cs" />
     <Compile Include="IFilter.cs" />
     <Compile Include="ImageStorage.cs" />
